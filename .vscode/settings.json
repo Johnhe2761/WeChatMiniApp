@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "*.cjson": "jsonc",
+        "*.wxss": "css",
+        "*.wxs": "javascript",
+        "*.wxml": "html"
+    },
+    "less.compile": {
+        "compress":true,
+        "sourceMap":true,
+        "outExt":".wxss"
+}
+}
