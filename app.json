@@ -1,0 +1,61 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/cart/cart",
+    "pages/user/user",
+    "pages/pay/pay",
+    "pages/search/search",
+    "pages/goods-details/index",
+    "pages/order/order",
+    "pages/feedback/feedback",
+    "pages/super/super",
+    "pages/category/category",
+    "pages/buynow/buynow",
+    "pages/collect/collect",
+    "pages/history/history",
+    "pages/aboutus/aboutus",
+    "pages/super_paid/super_paid",
+    "pages/super_payafter/super_payafter",
+    "pages/super_detail/super_detail",
+    "pages/order_details/order_details"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#8FBC8F",
+    "navigationBarTitleText": "玫瑰超市",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#8FBC8F"
+  },
+  "tabBar": {
+    "color": "#8FBC8F",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icon/index.png",
+        "selectedIconPath": "icon/indexs.png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "分类",
+        "iconPath": "icon/category.png",
+        "selectedIconPath": "icon/categorys.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "icon/cart.png",
+        "selectedIconPath": "icon/cartselected.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "icon/user.png",
+        "selectedIconPath": "icon/users.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
