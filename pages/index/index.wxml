@@ -1,0 +1,54 @@
+<view class="mg_index">
+  <!-- 搜索框
+  <Search>
+  </Search> -->
+  <!-- 轮播图 -->
+  <view class="index_swiper">
+    <swiper autoplay indicator-dots circular>
+      <swiper-item wx:for="{{swiperList}}" bindtap="handlePreviewImage">
+        <navigator>
+          <!-- widthFix让图片等比例渲染 -->
+          <image mode="widthFix" src="{{item.pic}}"></image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>
+<view class="notice-box">
+  <view class="notice">
+    <image class="notice_icon" src="/icon/notice.png"></image>
+    <view class="notice_itemr">本小区内免运费送货上门，支持货到付款！</view>
+  </view>
+  <!-- <view class="more"><navigator url="/pages/notice/index">更多 ></navigator></view> -->
+</view>
+
+
+<view class="category-box">
+  <view class="category-list" wx:for="{{categories}}" wx:for-item="categories">
+    <view bindtap="tabClick" class="category-column ">
+      <image mode="aspectFill" data-id="{{categories.cat_id}}" class="category-imgbox" src='{{categories.cat_icon}}' bindtap="tocategory"></image>
+      <navigator class="category-title" data-id="{{categories.cat_id}}" bindtap="tocategory" >{{categories.cat_name}}</navigator>
+    </view>
+  </view>
+</view>
+<view class="notice-space"></view>
+<view class="notice-box">
+  <view class="notice">
+    <view class="notice-title">推荐商品</view>
+  </view>
+</view>
+<view class="goods-container">
+  <view class="goods-box" wx:for="{{recommend}}" wx:for-item="recommend">
+    <view class="img-box"data-id="{{recommend.cat_id}}" bindtap="todetail">
+      <image src='{{recommend.cat_icon}}' class="image" mode="aspectFill" lazy-load="true" />
+    </view>
+    <view class="goods-title">{{recommend.cat_name}}</view>
+    <view style='display:flex;'>
+      <view class="goods-price">¥ {{recommend.minPrice}}</view>
+      <view class="goods-price" style='color:#aaa;text-decoration:line-through'>¥ {{recommend.oPrice}}</view>
+    </view>
+  </view>
+</view>
+<view class="line"></view>
+<view class="notice-end weui-loadmore__tips_in-line">没有更多啦</view>
+<view class="line"></view>

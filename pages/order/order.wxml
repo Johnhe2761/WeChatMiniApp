@@ -1,0 +1,30 @@
+<Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange">
+  <block wx:if="{{existorder == 1}}">
+    <view class="order_main">
+      <view wx:for="{{orders}}" wx:key="order_id" class="order_item" data-id="{{item.order_number}}" bindtap='todetails'>
+
+        <view class="order_no_row">
+          <view class="order_no_text">订单编号</view>
+          <view class="order_no_value">{{item.order_number}}</view>
+        </view>
+        <view class="order_price_row">
+          <view class="order_price_text">订单价格</view>
+          <view class="order_price_value">￥{{item.order_price}}</view>
+        </view>
+        <view class="order_time_row">
+          <view class="order_time_text">订单日期</view>
+          <view class="order_time_value">{{item.time}}</view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="title-box">
+      暂无订单
+    </view>
+    <view class="to-index-btn1" bindtap="toIndexPage">
+      去逛逛
+    </view>
+  </block>
+
+</Tabs>

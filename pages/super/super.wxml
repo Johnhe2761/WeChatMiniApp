@@ -1,0 +1,2 @@
+<view class="n" >{{num_0}}</view><button class='m'  bindtap='getpaidorder'> 已支付未送货订单 </button>
+<view class="n" >{{num_1}}</view><button class='m'  bindtap='getnotpaidorder'> 货到付款未送货订单 </button>

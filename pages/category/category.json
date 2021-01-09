@@ -1,0 +1,9 @@
+{
+  "usingComponents": {"Search":"../../components/Search/Search"},
+  "backgroundTextStyle": "dark",
+  "navigationBarBackgroundColor": "#8FBC8F",
+  "navigationBarTitleText": "分类",
+  "navigationBarTextStyle": "white",
+  "enablePullDownRefresh": true,
+  "backgroundColor": "#8FBC8F"
+}

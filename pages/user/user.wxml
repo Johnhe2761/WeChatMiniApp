@@ -1,0 +1,81 @@
+<import src="/template/login/index.wxml" />
+<view class="user_info_wrap">
+  <view wx:if="{{userinfo.avatarUrl}}" class="user_img_wrap">
+    
+    <image class="user_bg" src="{{userinfo.avatarUrl}}" ></image>
+    
+    <view class="user_info">
+      <image class="user_icon" src="{{userinfo.avatarUrl}}"></image>
+      <view class="user_name">{{userinfo.nickName}}</view>
+    </view>
+  </view>
+  <view wx:else class="user_btn">
+    <button plain open-type="getUserInfo" bindgetuserinfo="handleGetUserInfo" >登录</button>
+  </view>
+
+</view> 
+ <template is="apifmLogin" data="{{wxlogin: wxlogin}}" />
+<view class="user_content">
+  
+  <view class="user_main">
+    <!-- 历史足迹 -->
+    <view class="history_wrap">
+      
+      <navigator url="/pages/collect/collect" >
+        <view class="his_num" >{{collectNums}}</view>
+        <view class="his_name">收藏的商品</view>
+      </navigator>
+      
+      <navigator url="/pages/history/history">
+        <view class="his_num">0</view>
+        <view class="his_name">我的足迹</view>
+      </navigator>
+    </view>
+    <!-- 我的订单 -->
+    <view class="orders_wrap">
+      <view class="orders_title">我的订单</view>
+      <view class="order_content">
+        <navigator url="/pages/order/order?type=1">
+          <view class="iconfont icon-ding_dan"></view>
+          <view class="order_name">全部订单</view>
+        </navigator>
+        <navigator url="/pages/order/order?type=2">
+          <view class="iconfont icon-fukuantongzhi"></view>
+          <view class="order_name">待付款</view>
+        </navigator>
+        <navigator url="/pages/order/order?type=3">
+          <view class="iconfont icon-receipt-address"></view>
+          <view class="order_name">待收货</view>
+        </navigator>
+        <navigator url="/pages/order/order?type=4">
+          <view class="iconfont icon-receipt-address"></view>
+          <view class="order_name">货到付款</view>
+        </navigator>
+        <navigator>
+          <view class="iconfont icon-tuihuotuikuan_dianpu"></view>
+          <view class="order_name">退款/退货</view>
+        </navigator>
+      </view>
+    </view>
+    <!-- 收货地址管理 -->
+    <view class="address_wrap" bindtap="manage">
+      收货地址管理
+    </view>
+    <!-- 应用信息相关 -->
+    <view class="app_info_wrap">
+      <view class="app_info_item app_info_contact">
+        <text>联系客服</text>
+        <text>xxxxxx</text>
+      </view>
+      <navigator url="/pages/feedback/feedback" class="app_info_item">意见反馈</navigator>
+      <navigator class="app_info_item" url="/pages/aboutus/aboutus">关于我们</navigator>
+    </view>
+    <!-- 推荐 -->
+    <view class="recommend_wrap" bindtap="sharemenu">
+      把应用推荐给其他人
+    </view>
+    <view wx:if="{{super}}" class="recommend_wrap" bindtap="tosuperpage">
+      管理员页面
+    </view>
+  </view>
+</view>

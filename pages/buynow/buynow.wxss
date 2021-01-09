@@ -1,0 +1,183 @@
+page {
+  padding-bottom: 90rpx;
+}
+.revice_address_row .address_btn {
+  padding: 20rpx;
+}
+.revice_address_row .address_btn button {
+  width: 55%;
+  line-height: 50rpx;
+}
+.revice_address_row .user_info_row {
+  display: flex;
+  padding: 20rpx;
+}
+.revice_address_row .user_info_row .user_info {
+  flex: 5;
+}
+.revice_address_row .user_info_row .user_phone {
+  flex:2;
+  text-align: right;
+}
+.revice_address_row .user_info_row .address_change{
+  color: #fff;
+  background: #8FBC8F;
+  border-radius: 6px;
+  width: 180rpx;
+  height: 50rpx;
+  line-height: 20rpx;
+  justify-content: center;
+  font-size: 28rpx;
+  
+}
+.cart_content .cart_title {
+  padding: 10rpx;
+  font-size: 36rpx;
+  text-align: center;
+  color: var(--themeColor);
+  border-top: 1rpx solid currentColor;
+  border-bottom: 1rpx solid currentColor;
+}
+.cart_content .cart_main .cart_item {
+  display: flex;
+  padding: 10rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.cart_content .cart_main .cart_item .cart_chk_wrap {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart_content .cart_main .cart_item .cart_img_wrap {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart_content .cart_main .cart_item .cart_img_wrap image {
+  width: 80%;
+}
+.cart_content .cart_main .cart_item .cart_info_wrap {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.cart_content .cart_main .cart_item .cart_info_wrap .goods_name {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  color: #666;
+}
+.cart_content .cart_main .cart_item .cart_info_wrap .goods_price_wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.cart_content .cart_main .cart_item .cart_info_wrap .goods_price_wrap .goods_price {
+  color: var(--themeColor);
+  font-size: 34rpx;
+}
+.cart_content .cart_main .cart_item .cart_info_wrap .goods_price_wrap .cart_num_tool {
+  display: flex;
+}
+.cart_content .cart_main .cart_item .cart_info_wrap .goods_price_wrap .cart_num_tool .num_edit {
+  width: 55rpx;
+  height: 55rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1rpx solid #ccc;
+}
+.cart_content .cart_main .cart_item .cart_info_wrap .goods_price_wrap .cart_num_tool .goods_num {
+  width: 55rpx;
+  height: 55rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer_tool {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 90rpx;
+  background-color: #fff;
+  display: flex;
+  border-top: 1rpx solid #ccc;
+}
+.footer_tool .all_chk_wrap {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer_tool .total_price_wrap {
+  flex: 6;
+  padding-right: 15rpx;
+  text-align: right;
+}
+.footer_tool .total_price_wrap .total_price .total_price_text {
+  color: var(--themeColor);
+  font-size: 30rpx;
+  font-weight: 1000;
+}
+.footer_tool .total_price_wrap .total_price_notice {
+  
+  font-size: 26rpx;
+  font-weight: 700;
+}
+.footer_tool .order_pay_wrap {
+  flex: 3;
+  background-color: var(--themeColor);
+  color: #fff;
+  font-size: 32rpx;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.to-index-btn {
+  color: #fff;
+  background: #8FBC8F;
+  border-radius: 10px;
+  width: 300rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 28rpx;
+}
+.to-pay-btn {
+  width: 240rpx;
+  text-align: center;
+  line-height: 90rpx;
+  background-color: #8FBC8F;
+  font-size: 32rpx;
+  color: #fff;
+}
+.no-goods-icon {
+  width: 100rpx;
+  height: 100rpx;
+  margin-top: 200rpx;
+  padding-left: 320rpx;
+}
+.title-box {
+  width: 100vw;
+  margin-top: 30rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #999;
+  margin-bottom: 50rpx;
+}
+.to-index-btn1{
+  color: #fff;
+  background: #8FBC8F;
+  border-radius: 6px;
+  width: 300rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 28rpx;
+  margin-left: 222rpx;
+}

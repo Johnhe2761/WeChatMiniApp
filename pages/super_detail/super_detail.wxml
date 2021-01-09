@@ -1,0 +1,18 @@
+<!--pages/super_detail/super_detail.wxml-->
+
+<view>送货地址： {{theone.address}}</view>
+<view>订单号： {{theone.order_number}}</view>
+<view>订单总价：  {{theone.order_price}}</view>
+<view wx:if="{{!theone.paytype}}">支付类型: 在线支付</view>
+<view wx:else>支付类型: 货到付款</view>
+<view wx:if="{{!theone.status}}">支付状况: 未支付</view>
+<view wx:else>支付状况: 已支付 </view>
+
+<view >清单：</view>
+<view wx:for="{{theone.carts}}"  wx:for-item="itemName">
+  <view>                                 </view>
+  <view>商品名称：{{itemName.goods_name}}</view>
+  <view>商品数量：{{itemName.goods_number}}</view>
+  <view>商品价格：{{itemName.goods_price}}</view>
+</view>
+<button type='primary' bindtap='delete'>已送达</button>

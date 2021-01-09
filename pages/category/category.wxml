@@ -1,0 +1,51 @@
+<view class="container">
+  <!-- 搜索框
+  <Search>
+  </Search> -->
+  <view class="content-container">
+    <scroll-view class="category-container" scroll-y="true" scroll-with-animation="true">
+      <view wx:if="{{category.cat_level == 0}}" class="category {{categorySelected.id==category.cat_id?'active':''}}"
+        wx:for="{{category}}" wx:for-item="category" wx:key="cat_id" data-id="{{category.cat_id}}"
+        bindtap="onCategoryClick">
+        <view class="name {{categorySelected.id==category.cat_id?'active':''}}">{{category.cat_name}}</view>
+      </view>
+    </scroll-view>
+    <scroll-view class="goods-container" scroll-y="true" scroll-top="{{scrolltop}}" wx:if='{{onLoadStatus}}'>
+
+      <view wx:if="{{!currentGoods}}" class="no-data">
+        <view class="line"></view>
+        <view class="txt">暂无商品</view>
+        <view class="line"></view>
+      </view>
+      <block wx:else>
+        <nav wx:for="{{category}}" wx:key="id" wx:if="{{item.cat_id == categorySelected.id}}">
+
+          <view class="no-data medium-category">
+            <view class="line"></view>
+            <view class="txt">{{item.cat_name}}</view>
+            <view class="line"></view>
+          </view>
+
+          <view bindtap="toDetailsTap" class="goods" wx:for="{{goodslist}}" wx:key="id" wx:for-item="goodslist">
+            <image mode="aspectFill" class="pic" src="{{goodslist.cat_icon}}" data-id='{{goodslist.cat_id}}'
+              bindtap="toDetailsTap">
+            </image>
+            <view class="name ellipsis" data-id='{{goodslist.cat_id}}' bindtap="toDetailsTap">{{goodslist.cat_name}}
+            </view>
+            <view bindtap="toDetailsTap" class='soldInfo'>
+              <view class='good-price-box'>
+                <text class="price">¥ {{goodslist.minPrice}}</text>
+              </view>
+            </view>
+            <view bindtap="toDetailsTap" class='soldInfo'>
+              <view class='good-sales-box'>
+                <text class="number">已售 {{goodslist.selled}}件</text>
+              </view>
+            </view>
+            <image data-id="{{goodslist.cat_id}}" bindtap="toDetailsTap" class="car" src="/icon/car.png"></image>
+          </view>
+        </nav>
+      </block>
+    </scroll-view>
+  </view>
+</view>

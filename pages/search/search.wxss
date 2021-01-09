@@ -1,0 +1,8 @@
+.title-box {
+  width: 100vw;
+  margin-top: 30rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #999;
+  margin-bottom: 50rpx;
+}

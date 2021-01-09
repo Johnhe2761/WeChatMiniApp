@@ -1,0 +1,19 @@
+
+  <!-- <view class="goods" wx:for="{{order}}">{{item.order_number}} -->
+    <view class="order_main">
+      <view wx:for="{{order}}" wx:key="order_id" class="order_item" bindtap='todetail' data-id="{{item.order_number}}">
+
+        <view class="order_no_row">
+          <view class="order_no_text">订单编号</view>
+          <view class="order_no_value">{{item.order_number}}</view>
+        </view>
+        <view class="order_price_row">
+          <view class="order_price_text">订单价格</view>
+          <view class="order_price_value">￥{{item.order_price}}</view>
+        </view>
+        <view class="order_time_row">
+          <view class="order_time_text">订单日期</view>
+          <view class="order_time_value">{{item.time}}</view>
+        </view>
+      </view>
+    </view>

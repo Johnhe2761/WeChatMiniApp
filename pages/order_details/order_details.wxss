@@ -1,0 +1,8 @@
+.m{
+  border-radius: 15rpx;
+  font-size: 38rpx;
+  margin-bottom: 50rpx;
+  background-color: #8FBC8F;
+  color:white;
+}
+
